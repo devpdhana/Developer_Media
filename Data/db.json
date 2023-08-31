@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Artificial Intelligence: Changing the Landscape",
+      "date": "08/11/2023, 10AM",
+      "body": "Discover how AI is revolutionizing industries and reshaping our world."
+    },
+    {
+      "id": 2,
+      "title": "Machine Learning: Unveiling New Possibilities",
+      "date": "08/11/2023, 11AM",
+      "body": "Exploring the fascinating world of machine learning and its real-world applications."
+    },
+    {
+      "id": 3,
+      "title": "The Rise of Automation in Modern Technology Dhana",
+      "datetime": "Aug 29, 2023 2:30:01 PM",
+      "body": "Dive into the advancements in Dhana automation technology and its impact on various sectors."
+    }
+  ]
+}
