@@ -18,6 +18,7 @@ import api from './Api/posts'
 import EditPost from './EditPost';
 //customHooks
 import useWindowSize from './hooks/useWindowSize';
+import useAxiosFetch from './hooks/useAxiosFetch';
 
 function App() {
 
@@ -57,24 +58,28 @@ function App() {
   const navigate = useNavigate()
 
   const {width} = useWindowSize()
+  const {data,fetchError,isLoading} = useAxiosFetch('http://localhost:3500/posts')
 
   useEffect(()=>{
-    const fetchPosts = async()=>{
-      try{
-        const response = await api.get('/posts')
-        setPosts(response.data)
-      }catch(err) {
-        if(err.response){
-          console.log(err.response.data)
-          console.log(err.response.status)
-          console.log(err.response.headers)
-        }else {
-          console.log(err.message)
-        }
-      }
-    }
-    fetchPosts()
-  },[])
+    // const fetchPosts = async()=>{
+    //   try{
+    //     const response = await api.get('/posts')
+    //     setPosts(response.data)
+    //   }catch(err) {
+    //     if(err.response){
+    //       console.log(err.response.data)
+    //       console.log(err.response.status)
+    //       console.log(err.response.headers)
+    //     }else {
+    //       console.log(err.message)
+    //     }
+    //   }
+    // }
+    // fetchPosts()
+    
+      setPosts(data)
+    
+  },[data])
 
   
 
@@ -189,7 +194,11 @@ function App() {
       <Footer/> */}
       {
           <Routes>
-            <Route path='/' element={<Home posts={searchResult}/>}>
+            <Route path='/' element={<Home 
+              posts={searchResult}
+              fetchError = {fetchError}
+              isLoading = {isLoading}
+              />}>
               <Route path=''/>
             </Route>
             <Route path='/home' element={<Home posts = {posts}/>}>

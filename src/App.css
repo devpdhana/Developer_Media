@@ -276,3 +276,21 @@ footer {
   background-color: #333;
   color: white;
 }
+
+.editButton {
+  background-color: green;
+  color: #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.deleteButton {
+  background-color: red;
+  color: #ccc;
+  margin: 10px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 10px;
+}

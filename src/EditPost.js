@@ -25,7 +25,7 @@ const EditPost = ({posts,editTitle,setEditTitle,editBody,setEditBody,handleEdit}
                 onChange={(e)=>(setEditTitle(e.target.value))}/>
             </div>
             
-            <div>
+            <div className="form-group">
                 <label>Body</label>
                 <textarea 
                 type="text"
@@ -33,8 +33,10 @@ const EditPost = ({posts,editTitle,setEditTitle,editBody,setEditBody,handleEdit}
                 value={editBody}
                 onChange={(e)=>(setEditBody(e.target.value))}/>
             </div>
-
+            <div className="form-group">
             <button type = "submit" onClick={()=>handleEdit(post.id)}>Submit</button>
+            </div>
+            
         </form>
     </main>
   )
