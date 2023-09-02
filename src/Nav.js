@@ -3,8 +3,11 @@ import Home from './Home';
 import Posts from './Posts';
 import { Routes,Route } from "react-router-dom";
 import NewPost from "./NewPost";
+import { useContext } from "react";
+import DataContext from "./context/DataContext";
 
-const Nav = ({search ,setSearch}) => {
+const Nav = () => {
+  const {search ,setSearch} = useContext(DataContext)
   return (
     <nav className="navbar">
         <form onSubmit={(e)=>e.preventDefault()}>

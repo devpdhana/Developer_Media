@@ -1,6 +1,9 @@
+import { useContext } from "react"
 import Post from "./Post"
+import DataContext from "./context/DataContext"
 
-const Home = ({posts,fetchError,isLoading}) => {
+const Home = () => {
+  const {searchResult,fetchError,isLoading} = useContext(DataContext)
   console.log(fetchError)
   return (
     <main className = "Home Posts">
@@ -8,8 +11,8 @@ const Home = ({posts,fetchError,isLoading}) => {
         {
            !isLoading && fetchError && <p>{fetchError}</p>
         }
-        {!fetchError && !isLoading && (posts.length ?
-          posts.map(post=>
+        {!fetchError && !isLoading && (searchResult.length ?
+          searchResult.map(post=>
             <Post key = {post.id} post={post} />
           ) : <p>No post available</p>)
         }

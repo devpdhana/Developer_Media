@@ -262,6 +262,10 @@ footer {
   text-align: center;
 }
 
+.Footer {
+  margin-bottom: 0%;
+}
+
 
 
 .Home, .NewPost, .Posts, .About {

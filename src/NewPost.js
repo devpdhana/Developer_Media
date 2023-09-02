@@ -1,4 +1,8 @@
-const NewPost = ({title,setTitle,body,setBody,handleClick}) => {
+import { useContext } from "react"
+import DataContext from "./context/DataContext"
+
+const NewPost = () => {
+  const {title,setTitle,body,setBody,handleClick} = useContext(DataContext)
   return (
     <div className="main NewPost">
       <div className="form-container">

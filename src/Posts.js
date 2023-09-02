@@ -1,9 +1,11 @@
 import { Link,Outlet } from "react-router-dom"
 import Constent from "./Constent"
 import { useParams } from "react-router-dom"
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
+import DataContext from "./context/DataContext"
 
-const Posts = ({posts,handleDelete}) => {
+const Posts = () => {
+  const {posts,handleDelete} = useContext(DataContext)
   const {id} = useParams()
   const post = posts.find(post => (post.id) === Number(id))
   console.log(post)
