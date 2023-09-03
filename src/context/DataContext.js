@@ -95,8 +95,8 @@ export const DataProvider = ({children})=>{
             searchResult,fetchError,isLoading,
             posts,
             title,setTitle,body,setBody,handleClick,
-            posts,handleDelete,
-            posts,editTitle,setEditTitle,editBody,setEditBody,handleEdit
+            handleDelete,
+            editTitle,setEditTitle,editBody,setEditBody,handleEdit
         }}>
             {children}
         </DataContext.Provider>

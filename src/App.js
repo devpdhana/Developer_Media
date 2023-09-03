@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Header from './Header';
@@ -9,10 +9,10 @@ import Posts from './Posts';
 import Missing from "./Missing";
 import Footer from './Footer'
 import About from './About'
-import Constent from './Constent';
-import { Route, Routes,Link, useNavigate } from 'react-router-dom';
-import Post from './Post';
-import {useState , useEffect} from 'react'
+// import Constent from './Constent';
+import { Route, Routes } from 'react-router-dom';
+// import Post from './Post';
+// import {useState , useEffect} from 'react'
 // import {format} from 'date-fns'
 // import api from './Api/posts'
 import EditPost from './EditPost';
