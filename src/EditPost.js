@@ -6,7 +6,7 @@ const EditPost = () => {
     const {posts,editTitle,setEditTitle,editBody,setEditBody,handleEdit} = useContext(DataContext)
     const {id} = useParams()
     const post = posts.find((post)=>(post.id).toString()===id)
-    console.log(id)
+    // console.log(id)
     useEffect(()=>{
         if (post){
             setEditTitle(post.title)
