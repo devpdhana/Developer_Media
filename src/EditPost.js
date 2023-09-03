@@ -19,7 +19,7 @@ const EditPost = () => {
     <main>
         <form className="form-container" onSubmit={(e)=>e.preventDefault()}>
             <div className="form-group">
-                <label>Title</label>
+                <label htmlFor="editTitle">Title</label>
                 <input 
                 type="text"
                 id="editTitle"
@@ -28,7 +28,7 @@ const EditPost = () => {
             </div>
             
             <div className="form-group">
-                <label>Body</label>
+                <label htmlFor="body">Body</label>
                 <textarea 
                 type="text"
                 id="body"

@@ -204,7 +204,7 @@ function App() {
                 // fetchError = {fetchError}
                 // isLoading = {isLoading}
                 />}>
-                <Route path=''/>
+                {/* <Route path=''/> */}
               </Route>
               <Route path='/home' element={<Home 
               // posts = {posts}

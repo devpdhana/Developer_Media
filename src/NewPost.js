@@ -9,7 +9,7 @@ const NewPost = () => {
         <h1>New post</h1>
         <form onSubmit={handleClick}>
           <div className="form-group">
-            <label>Title</label>
+            <label htmlFor="title">Title</label>
             <input 
             type="text"
             id = "title"
@@ -20,7 +20,7 @@ const NewPost = () => {
           </div>
         
         <div className="form-group">
-          <label>Body</label>
+          <label htmlFor="body">Body</label>
           <textarea 
           type="text"
           id = "body"
